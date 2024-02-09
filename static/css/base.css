@@ -1,0 +1,42 @@
+
+.screen{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-div{
+    background-color: rgb(37, 16, 80);
+    color: white;
+    height: 100vh;
+    width: 20%;
+    padding: 15px;
+}
+
+.navbar-div ul{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    justify-content: center;
+}
+
+.screen .navbar ul a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+li .btn-nav{
+    background-color: blueviolet;
+    border: none;
+}
+
+li .btn-nav:hover{
+    background-color: rgb(228, 151, 19);
+}
+
+.student-list{
+    padding: 15px;
+}
