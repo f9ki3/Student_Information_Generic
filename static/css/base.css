@@ -1,3 +1,6 @@
+*{
+    color: rgb(68, 68, 68);
+}
 
 .screen{
     display: flex;
@@ -34,9 +37,27 @@ li .btn-nav{
 }
 
 li .btn-nav:hover{
-    background-color: rgb(228, 151, 19);
+    background-color: rgb(170, 94, 241);
 }
 
 .student-list{
     padding: 15px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.student-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.student-header div{
+    display: flex;
+    flex-direction: row;
 }

@@ -10,19 +10,27 @@ def create_table():
     cursor = conn.cursor()
     cursor.execute('''CREATE TABLE IF NOT EXISTS students (
                       id INTEGER PRIMARY KEY,
-                      name TEXT,
-                      section TEXT
+                      first_name TEXT,
+                      last_name TEXT,
+                      age INTEGER,
+                      birthdate TEXT,
+                      address TEXT,
+                      email TEXT,
+                      year_level INTEGER,
+                      school_year TEXT
                       )''')
     conn.commit()
     conn.close()
 
 # Function to insert data into the database
-def insert_data(name, section):
+def insert_data(first_name, last_name, age, birthdate, address, email, year_level, school_year):
     conn = sqlite3.connect('students.db')
     cursor = conn.cursor()
-    cursor.execute("INSERT INTO students (name, section) VALUES (?, ?)", (name, section))
+    cursor.execute("INSERT INTO students (first_name, last_name, age, birthdate, address, email, year_level, school_year) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                   (first_name, last_name, age, birthdate, address, email, year_level, school_year))
     conn.commit()
     conn.close()
+
 
 # Function to retrieve all students from the database
 def get_students():
