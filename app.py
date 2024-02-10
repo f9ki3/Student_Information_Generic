@@ -22,7 +22,7 @@ def create_table():
     conn.commit()
     conn.close()
 
-# Function to insert data into the database
+
 def insert_data(first_name, last_name, age, birthdate, address, email, year_level, school_year):
     conn = sqlite3.connect('students.db')
     cursor = conn.cursor()
@@ -32,7 +32,6 @@ def insert_data(first_name, last_name, age, birthdate, address, email, year_leve
     conn.close()
 
 
-# Function to retrieve all students from the database
 def get_students():
     conn = sqlite3.connect('students.db')
     cursor = conn.cursor()

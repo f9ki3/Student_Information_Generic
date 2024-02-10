@@ -2,94 +2,103 @@
     <div class="student-header">
         <div class="py-2">
             <input type="text" class="rounded border px-2" placeholder="Search">
+            <button class="btn btn-light border ms-2 text-light border-0" style="background-color: blueviolet;">Search</button>
         </div>
         <div class="py-2">
-            <button class="btn btn-light border me-2 text-light border-0" style="background-color: blueviolet;">Add student</button>
-
             <div class="dropdown ">
-                <button style="background-color: blueviolet;" class="btn border-0 text-light btn-sm btn-light border dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Filter Sections
+                <button style="background-color: blueviolet;" class="btn me-2 border-0 text-light btn-light border dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Student Section
                 </button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">41A</a></li>
                   <li><a class="dropdown-item" href="#">41B</a></li>
                 </ul>
               </div>
+              <div class="dropdown ">
+                <button style="background-color: blueviolet;" class="btn me-2 border-0 text-light btn-light border dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Filter
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Names</a></li>
+                  <li><a class="dropdown-item" href="#">Date</a></li>
+                </ul>
+              </div>
+            <button class="btn btn-light border  text-light border-0" style="background-color: blueviolet;">Add student</button>
         </div>
     </div>
-    <form method="post" class="form form-group border py-4 rounded px-4">
-        <h6>Personal Information</h6>
-        <div class="row g-3 mb-3">
-            <div class="col-sm">
-              <input type="text" class="form-control" placeholder="First Name" aria-label="City">
-            </div>
-            <div class="col-sm">
-              <input type="text" class="form-control" placeholder="Last Name" aria-label="State">
-            </div>
-            <div class="col-sm">
-              <input type="text" class="form-control" placeholder="Middle Name" aria-label="Zip">
-            </div>
-        </div>
-        <div class="row g-3 mb-3">
-            <div class="col-sm">
-                <div class="col-auto">
-                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-                    <select class="form-select" id="autoSizingSelect">
-                      <option selected>Section</option>
-                      <option value="1">BSIT-41A</option>
-                      <option value="2">BSIT-41B</option>
-                      <option value="3">BSIT-41C</option>
-                    </select>
-                  </div>                
-            </div>
-            <div class="col-sm">
-                <div class="col-auto">
-                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-                    <select class="form-select" id="autoSizingSelect">
-                      <option selected>Academic Status</option>
-                      <option value="1">Regular</option>
-                      <option value="2">Irregular</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-sm">
-                <input type="text" class="form-control" placeholder="School Year" aria-label="State">
-            </div>
-        </div>
-        <div class="row g-3 mb-3">
-            <div class="col-sm-6">
-              <input type="text" class="form-control" placeholder="Address" aria-label="City">
-            </div>
-            <div class="col-sm">
-              <input type="date" class="form-control" placeholder="Birthdate" aria-label="State">
-            </div>
-            <div class="col-sm">
-              <input type="text" class="form-control" placeholder="Age" aria-label="Zip">
-            </div>
-        </div>
-        <h6>Contact Information</h6>
-        <div class="row g-3 mb-3">
-            <div class="col-sm">
-              <input type="text" class="form-control" placeholder="Student Contact No." aria-label="City">
-            </div>
-            <div class="col-sm">
-              <input type="text" class="form-control" placeholder="Student Email Address" aria-label="State">
-            </div>
-        </div>
-        <div class="row g-3 mb-3">
-            <div class="col-sm">
-              <input type="text" class="form-control" placeholder="Guardian Full Name" aria-label="City">
-            </div>
-            <div class="col-sm">
-              <input type="text" class="form-control" placeholder="Email Address or Contact no." aria-label="State">
-            </div>
-        </div>
-        <hr class="text-secondary">
-        <div class="w-100 text-end" style="display: flex; flex-direction: row">
-            <button class="btn btn-light rounded border w-50 me-2"  type="submit">Submit</button>
-            <button class="btn btn-light rounded border w-50 ms-2"  type="submit">Cancel</button>
-        </div>
-    </form>
+    <form id="myForm" method="post" class="form form-group border py-4 rounded px-4">
+      <h6>Personal Information</h6>
+      <div class="row g-3 mb-3">
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="First Name" aria-label="City">
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Last Name" aria-label="State">
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Middle Name" aria-label="Zip">
+          </div>
+      </div>
+      <div class="row g-3 mb-3">
+          <div class="col-sm">
+              <div class="col-auto">
+                  <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                  <select class="form-select" id="autoSizingSelect">
+                    <option selected>Student Section</option>
+                    <option value="1">BSIT-41A</option>
+                    <option value="2">BSIT-41B</option>
+                    <option value="3">BSIT-41C</option>
+                  </select>
+                </div>                
+          </div>
+          <div class="col-sm">
+              <div class="col-auto">
+                  <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                  <select class="form-select" id="autoSizingSelect">
+                    <option selected>Academic Status</option>
+                    <option value="1">Regular</option>
+                    <option value="2">Irregular</option>
+                  </select>
+              </div>
+          </div>
+          <div class="col-sm">
+              <input type="text" class="form-control" placeholder="School Year" aria-label="State">
+          </div>
+      </div>
+      <div class="row g-3 mb-3">
+          <div class="col-sm-6">
+            <input type="text" class="form-control" placeholder="Address" aria-label="City">
+          </div>
+          <div class="col-sm">
+            <input type="date" class="form-control" placeholder="Birthdate" aria-label="State">
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Age" aria-label="Zip">
+          </div>
+      </div>
+      <h6>Contact Information</h6>
+      <div class="row g-3 mb-3">
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Student Contact No." aria-label="City">
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Student Email Address" aria-label="State">
+          </div>
+      </div>
+      <div class="row g-3 mb-3">
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Guardian Full Name" aria-label="City">
+          </div>
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Email Address or Contact no." aria-label="State">
+          </div>
+      </div>
+      <hr class="text-secondary">
+      <div class="w-100 text-end" style="display: flex; flex-direction: row">
+          <button class="btn btn-light rounded border w-50 me-2"  type="submit">Submit</button>
+          <button class="btn btn-light rounded border w-50 ms-2"  type="submit">Cancel</button>
+      </div>
+  </form>
 
     <!-- Listahan ng student -->
     <h4 class="fw-bolder">List of Students</h4>

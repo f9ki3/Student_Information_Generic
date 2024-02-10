@@ -61,3 +61,27 @@ form {
     display: flex;
     flex-direction: row;
 }
+
+.logo img{
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.navbox-div{
+    background-color: rgb(37, 16, 80);
+    color: white;
+    height: 100vh;
+    width: auto;
+    padding: 15px;
+}
+
+li .btnbox-nav{
+    background-color: #8a2be2;
+    border: none;
+}
+
+li .btnbox-nav:hover{
+    background-color: rgb(170, 94, 241);
+}
+
