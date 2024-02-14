@@ -23,27 +23,27 @@
                   <li><a class="dropdown-item" href="#">Date</a></li>
                 </ul>
               </div>
-            <button class="btn btn-light border  text-light border-0" style="background-color: blueviolet;">Add student</button>
+            <button onclick="add()" class="btn btn-light border  text-light border-0" style="background-color: blueviolet;">Add student</button>
         </div>
     </div>
-    <form id="myForm" method="post" class="form form-group border py-4 rounded px-4">
+    <form id="myForm" style="display: none; background-color: white;" class=" form form-group border py-4 rounded px-4">
       <h6>Personal Information</h6>
       <div class="row g-3 mb-3">
           <div class="col-sm">
-            <input type="text" class="form-control" placeholder="First Name" aria-label="City">
+            <input type="text" class="form-control" name="fname" placeholder="First Name" aria-label="City">
           </div>
           <div class="col-sm">
-            <input type="text" class="form-control" placeholder="Last Name" aria-label="State">
+            <input type="text" class="form-control" name="lname" placeholder="Last Name" aria-label="State">
           </div>
           <div class="col-sm">
-            <input type="text" class="form-control" placeholder="Middle Name" aria-label="Zip">
+            <input type="text" class="form-control" name="mname" placeholder="Middle Name" aria-label="Zip">
           </div>
       </div>
       <div class="row g-3 mb-3">
           <div class="col-sm">
               <div class="col-auto">
                   <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-                  <select class="form-select" id="autoSizingSelect">
+                  <select class="form-select" name="section" id="autoSizingSelect">
                     <option selected>Student Section</option>
                     <option value="1">BSIT-41A</option>
                     <option value="2">BSIT-41B</option>
@@ -54,7 +54,7 @@
           <div class="col-sm">
               <div class="col-auto">
                   <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-                  <select class="form-select" id="autoSizingSelect">
+                  <select class="form-select" name="status" id="autoSizingSelect">
                     <option selected>Academic Status</option>
                     <option value="1">Regular</option>
                     <option value="2">Irregular</option>
@@ -62,41 +62,41 @@
               </div>
           </div>
           <div class="col-sm">
-              <input type="text" class="form-control" placeholder="School Year" aria-label="State">
+              <input type="text" class="form-control" name="sy" placeholder="School Year" aria-label="State">
           </div>
       </div>
       <div class="row g-3 mb-3">
           <div class="col-sm-6">
-            <input type="text" class="form-control" placeholder="Address" aria-label="City">
+            <input type="text" class="form-control" name="address" placeholder="Address" aria-label="City">
           </div>
           <div class="col-sm">
-            <input type="date" class="form-control" placeholder="Birthdate" aria-label="State">
+            <input type="date" class="form-control" name="bday" placeholder="Birthdate" aria-label="State">
           </div>
           <div class="col-sm">
-            <input type="text" class="form-control" placeholder="Age" aria-label="Zip">
+            <input type="text" class="form-control" name="age" placeholder="Age" aria-label="Zip">
           </div>
       </div>
       <h6>Contact Information</h6>
       <div class="row g-3 mb-3">
           <div class="col-sm">
-            <input type="text" class="form-control" placeholder="Student Contact No." aria-label="City">
+            <input type="text" class="form-control" name="contact" placeholder="Student Contact No." aria-label="City">
           </div>
           <div class="col-sm">
-            <input type="text" class="form-control" placeholder="Student Email Address" aria-label="State">
+            <input type="text" class="form-control" name="email" placeholder="Student Email Address" aria-label="State">
           </div>
       </div>
       <div class="row g-3 mb-3">
           <div class="col-sm">
-            <input type="text" class="form-control" placeholder="Guardian Full Name" aria-label="City">
+            <input type="text" class="form-control" name="guardian" placeholder="Guardian Full Name" aria-label="City">
           </div>
           <div class="col-sm">
-            <input type="text" class="form-control" placeholder="Email Address or Contact no." aria-label="State">
+            <input type="text" class="form-control" name="email" placeholder="Email Address or Contact no." aria-label="State">
           </div>
       </div>
       <hr class="text-secondary">
       <div class="w-100 text-end" style="display: flex; flex-direction: row">
           <button class="btn btn-light rounded border w-50 me-2"  type="submit">Submit</button>
-          <button class="btn btn-light rounded border w-50 ms-2"  type="submit">Cancel</button>
+          <a class="btn btn-light rounded border w-50 ms-2"  onclick="cancel_add()">Cancel</a>
       </div>
   </form>
 
