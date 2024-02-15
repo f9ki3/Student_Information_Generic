@@ -101,12 +101,13 @@
   </form>
 
     <!-- Listahan ng student -->
-    <h4 class="fw-bolder">List of Students</h4>
     <ul class="list-group ">
-        {% for student in students %}
-            <li class="list-group-item">{{ student[1] }} - {{ student[2] }} 
-                <a href="{{ url_for('edit', student_id=student[0]) }}">Edit</a> 
-                <a href="{{ url_for('delete', student_id=student[0]) }}">Delete</a>
+      <h4 class="fw-bolder">List of Students</h4>
+        {% for student in range(5) %}
+            <li class="list-group-item">{{ student }} 
+              <p>List</p>
+                <a href="">Edit</a> 
+                <a href="">Delete</a>
             </li>
         {% endfor %}
     </ul>
